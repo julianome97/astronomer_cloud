@@ -46,7 +46,7 @@ def weather_forecast_dag():
     
     # Establecemos el flujo de tareas
     # Primero creamos la tabla, luego cargamos los datos y finalmente ejecutamos la consulta adicional
-    fetch_and_save_weather_data() >> execute_snowflake_create_table
+    fetch_and_save_weather_data() #>> execute_snowflake_create_table
 
 # Instanciamos el DAG
 dag = weather_forecast_dag()
