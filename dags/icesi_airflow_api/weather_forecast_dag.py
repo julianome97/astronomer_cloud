@@ -38,11 +38,11 @@ def weather_forecast_dag():
             table=TABLE
         )
     
-    execute_snowflake_create_table = SnowflakeOperator(
-        task_id='execute_snowflake_create_table',
-        snowflake_conn_id=SNOWFLAKE_CONN_ID,
-        sql='limpiar.sql'
-    )
+    # execute_snowflake_create_table = SnowflakeOperator(
+    #     task_id='execute_snowflake_create_table',
+    #     snowflake_conn_id=SNOWFLAKE_CONN_ID,
+    #     sql='limpiar.sql'
+    # )
     
     # Establecemos el flujo de tareas
     # Primero creamos la tabla, luego cargamos los datos y finalmente ejecutamos la consulta adicional
