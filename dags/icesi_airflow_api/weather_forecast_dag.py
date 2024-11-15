@@ -20,7 +20,7 @@ QUERIES_BASE_PATH = os.path.join(os.path.dirname(__file__), 'queries')
     schedule_interval='@daily',  # Configuramos el DAG para que se ejecute todos los días
     start_date=days_ago(1),      # Se iniciará desde el día anterior para pruebas
     catchup=False,               # Evitamos la ejecución de tareas atrasadas
-    default_args={'owner': 'airflow', 'retries': 1},
+    default_args={'owner': 'julian', 'retries': 1},
     tags=['weather', 'snowflake'],  # Etiquetas para categorizar el DAG en Airflow
     template_searchpath=QUERIES_BASE_PATH  # Carpeta donde Airflow busca archivos SQL
 )
